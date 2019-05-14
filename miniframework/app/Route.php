@@ -2,26 +2,24 @@
 
     namespace App;
 
-    class Route {
+    use MF\Init\Bootstrap;
 
-        public function initRoutes(){
+    class Route extends Bootstrap {
+
+        protected function initRoutes(){
             $routes['home'] = array(
                 'route' => '/',
-                'controller' => 'indexController',
+                'controller' => 'IndexController',
                 'action' => 'index'
             );
             $routes['sobre_nos'] = array(
                 'route' => '/sobre_nos',
-                'controller' => 'indexController',
+                'controller' => 'IndexController',
                 'action' => 'sobreNos'
             );
-        }
 
-        public function getUrl(){
-            //return parse_url('www.google.com/gmail?x10');
-            return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+            $this->setRoutes($routes);
         }
-
     }
     
 
