@@ -1,4 +1,4 @@
-# PHP-com-MVC
+# php-with-mvc
 
 MVC -> Padrão de Arquitetura
 
